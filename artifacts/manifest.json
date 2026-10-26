@@ -1,0 +1,24 @@
+{
+  "anchor_chain": "Base mainnet (chainId 8453)",
+  "anchor_ref_bytes32": "0x91a8d2b002012e470d9fe86eaa65630589d1118dbcf1733a3a5168fbabda6131",
+  "anchor_registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "anchored_ref": "91a8d2b002012e470d9fe86eaa65630589d1118dbcf1733a3a5168fbabda6131",
+  "fixture_id": "aer1-anchor-witness-worked-example",
+  "provenance": "Synthetic AER-1 receipt. canonical_bytes/output_hash/metadata_hash computed exactly per draft-zambo-aer1-26 Table 1/Section 5 (SHA-256 over canonical_bytes). NOT produced by a running AER-1 client or SDK. The anchored value is AER-1's own output_hash, unwrapped \u2014 no action_ref/JCS preimage involved, since the point is that AnchorRegistry.anchor(bytes32) can anchor AER-1's own digest directly. No claim that AER-1 or Brennan Zambo has integrated, endorsed, or adopted AnchorRegistry.",
+  "receipt": {
+    "canonical_bytes": "eyJjYWxsZXJfc2NvcGUiOiJhZXIxLWFuY2hvci13aXRuZXNzIiwicmVzdWx0Ijoib2siLCJ0b29sX25hbWUiOiJ3b3JrZWQtZXhhbXBsZS5sb29rdXAiLCJ0b29sX3ZlcnNpb24iOiIxLjAuMCJ9",
+    "created_at": "2026-10-26T15:30:00Z",
+    "id": "839a1e82-f885-5c7b-957e-de96e3261661",
+    "metadata_hash": "de8628a035cb6e7af9dada7d8cddffff296d2c0221627f80c8b6208f4163edcd",
+    "output_hash": "91a8d2b002012e470d9fe86eaa65630589d1118dbcf1733a3a5168fbabda6131",
+    "provenance_class": "executed-by-recording-system",
+    "receipt_schema_version": "0.4",
+    "tool": {
+      "caller_scope": "aer1-anchor-witness",
+      "name": "worked-example.lookup",
+      "version": "1.0.0"
+    },
+    "verification_status": "unverified"
+  },
+  "spec": "draft-zambo-aer1-26 (AER-1: A Portable Execution Receipt for AI Agent Tool Calls)"
+}

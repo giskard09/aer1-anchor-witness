@@ -1,0 +1,13 @@
+{
+  "description": "On-chain anchor of AER-1's own output_hash, taken directly as the bytes32 ref.",
+  "provenance_disclaimer": "Synthetic AER-1 receipt per draft-zambo-aer1-26 Table 1/Section 5. NOT produced by a running AER-1 client/SDK. No adoption or endorsement by Brennan Zambo/AER-1 is implied.",
+  "anchor_ref_bytes32": "0x91a8d2b002012e470d9fe86eaa65630589d1118dbcf1733a3a5168fbabda6131",
+  "registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
+  "chain": "Base mainnet (chainId 8453)",
+  "function": "anchor(bytes32)",
+  "event": "Anchored(bytes32 indexed ref, address indexed anchoredBy, uint256 timestamp)",
+  "tx": "0x23b1dfd04c1a409dbee0a2ff115f6fdd22d277eff64007d813da03fbbe0f9717",
+  "block": 53119457,
+  "anchored_by": "Rama operator wallet",
+  "anchored_at_utc": "2026-10-26T15:24:21Z"
+}
