@@ -23,19 +23,25 @@ after minting, not who minted them."* And on time: *"The `created_at`
 timestamp is asserted by the producer. Absent an anchor, a receipt
 carries no trusted time."*
 
-Section 10 already defines what an anchor needs to be to close that gap:
-*"A verified anchor proves that the anchored_digest existed no later than
-the anchor's publication time,"* but *"a 'witness' anchor controlled by
-the publisher gives no independent witnessing."* The spec correctly
-leaves the anchor target pluggable — its reference implementation uses
-Nostr relays, described explicitly as *"a deployment choice, not a
-requirement."*
+Section 10 says anchoring is optional (*"A receipt MAY be bound to one or
+more external anchors after issuance"*) and defines what an anchor needs
+to be to supply that trusted time: *"A verified anchor proves that the
+anchored_digest existed no later than the anchor's publication time."*
+It's also explicit about what disqualifies a witness: *'A "witness"
+anchor whose witness record is publisher-controlled provides no
+independent witnessing; it binds only the digest to the publisher's own
+statement at the anchor time.'*
 
-`AnchorRegistry` is one candidate for that slot: permissionless, no
-owner, no roles, the same contract address on three real chains — it
-isn't infrastructure anyone (including the receipt issuer) controls.
-This repo shows AER-1's own `output_hash` anchored into it directly,
-with no new format, no wrapping, no dependency.
+The spec defines five `anchor_type` values — `nostr`, `ots`, `witness`,
+`scitt`, `rfc3161` — each with its own fixed proof shape. None of them is
+a permissionless on-chain contract. `AnchorRegistry` doesn't fit any of
+the five as specified today: it's closest in spirit to `ots` (public,
+no publisher control over the underlying chain) but a different proof
+shape entirely (a transaction + event log, not a base64 OpenTimestamps
+calendar proof). This repo doesn't claim otherwise — it shows AER-1's
+own `output_hash` anchored into `AnchorRegistry` directly, as a concrete
+example of what a sixth, permissionless-contract anchor shape could look
+like, not a drop-in fit for an existing `anchor_type`.
 
 ## What's here
 

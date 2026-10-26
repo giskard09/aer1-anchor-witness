@@ -37,6 +37,11 @@
 - **Does not show:** that AER-1, Brennan Zambo, or zambo.dev has
   integrated, endorsed, or adopted `AnchorRegistry`. It is a worked example
   applying a public, permissionless contract to AER-1's own published
-  digest format. No claim of adoption, no claim that the existing Nostr
-  anchor path is deficient — the spec itself already treats the anchor
-  target as pluggable ("a deployment choice, not a requirement").
+  digest format. Anchoring itself is already optional in the spec
+  ("a receipt MAY be bound to one or more external anchors after
+  issuance") — but the spec's five defined `anchor_type` values
+  (`nostr`/`ots`/`witness`/`scitt`/`rfc3161`) each have a fixed proof
+  shape, and none of them is a permissionless on-chain contract.
+  `AnchorRegistry` doesn't fit any of the five as specified today — this
+  repo does not claim it does, only that the same digest anchors cleanly
+  into it as a sixth, different shape of external witness.
