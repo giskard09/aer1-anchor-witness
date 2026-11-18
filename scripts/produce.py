@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Produces a synthetic AER-1 receipt (per draft-zambo-aer1-26, Table 1 / Section
-5) and anchors its own `output_hash` directly into AnchorRegistry — no
+Produces a synthetic AER-1 receipt (per draft-zambo-aer1-26, Section 3, Table 1,
+and Section 4) and anchors its own `output_hash` directly into AnchorRegistry — no
 wrapping, no action_ref preimage, no translation. AER-1 already defines
 output_hash as SHA-256(canonical_bytes); AnchorRegistry.anchor(bytes32)
 takes exactly that shape.
@@ -9,7 +9,7 @@ takes exactly that shape.
 PROVENANCE: this is NOT captured from a running AER-1 client/SDK. The
 receipt shape (id, receipt_schema_version, created_at, tool, provenance_class,
 canonical_bytes, output_hash, metadata_hash, verification_status) is taken
-directly from draft-zambo-aer1-26 Table 1, read from the published I-D at
+directly from draft-zambo-aer1-26 Section 3 (Table 1), read from the published I-D at
 https://datatracker.ietf.org/doc/draft-zambo-aer1/ . No claim that AER-1 or
 Brennan Zambo has integrated, endorsed, or adopted AnchorRegistry.
 """
@@ -39,7 +39,7 @@ canonical_bytes = json.dumps(canonical_payload, separators=(",", ":"), sort_keys
 canonical_bytes_b64 = base64.b64encode(canonical_bytes).decode()
 
 # output_hash: SHA-256 of canonical_bytes, exactly as draft-zambo-aer1-26
-# Section 5 / Table 1 defines it. This is the value this repo anchors.
+# Section 3 (Table 1) and Section 4 define it. This is the value this repo anchors.
 output_hash = sha256_hex(canonical_bytes)
 
 metadata = {"receipt_schema_version": "0.4"}
@@ -72,7 +72,7 @@ manifest = {
     "anchor_chain": "Base mainnet (chainId 8453)",
     "provenance": (
         "Synthetic AER-1 receipt. canonical_bytes/output_hash/metadata_hash "
-        "computed exactly per draft-zambo-aer1-26 Table 1/Section 5 "
+        "computed exactly per draft-zambo-aer1-26 Section 3 (Table 1) and Section 4 "
         "(SHA-256 over canonical_bytes). NOT produced by a running AER-1 "
         "client or SDK. The anchored value is AER-1's own output_hash, "
         "unwrapped — no action_ref/JCS preimage involved, since the point "

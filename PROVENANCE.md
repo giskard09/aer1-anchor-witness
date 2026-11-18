@@ -5,7 +5,7 @@
 - The receipt shape (`id`, `receipt_schema_version`, `created_at`, `tool`,
   `provenance_class`, `canonical_bytes`, `output_hash`, `metadata_hash`,
   `verification_status`) is taken directly from **draft-zambo-aer1-26**
-  Table 1 / Section 5, read from the published I-D at
+  Section 3 (Table 1) and Section 4, read from the published I-D at
   [datatracker.ietf.org/doc/draft-zambo-aer1](https://datatracker.ietf.org/doc/draft-zambo-aer1/).
 - `output_hash` is computed exactly as the spec defines it: SHA-256 over
   `canonical_bytes`. The value in `artifacts/manifest.json` is independently

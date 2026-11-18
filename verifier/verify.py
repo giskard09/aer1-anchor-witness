@@ -4,7 +4,7 @@ Independent (stdlib-only) verifier for aer1-anchor-witness. Trusts nothing
 in manifest.json's prose fields — only recomputes.
 
 1. Recomputes output_hash = SHA-256(base64-decoded canonical_bytes), exactly
-   per draft-zambo-aer1-26 Table 1/Section 5, and checks it matches
+   per draft-zambo-aer1-26 Section 3 (Table 1) and Section 4, and checks it matches
    manifest.json.
 2. Queries Base mainnet RPC for the Anchored(bytes32,address,uint256) event
    with topics[1] == output_hash, confirming it exists on-chain.

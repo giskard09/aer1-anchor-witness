@@ -9,7 +9,7 @@ Base/Arbitrum/Ink).
 > **Provenance, up front (read `PROVENANCE.md` for the full statement).**
 > `output_hash` is computed exactly per
 > [draft-zambo-aer1-26](https://datatracker.ietf.org/doc/draft-zambo-aer1/)
-> Table 1/Section 5. It was **NOT produced by a running AER-1 client or
+> Section 3 (Table 1) and Section 4. It was **NOT produced by a running AER-1 client or
 > SDK** — this is a synthetic receipt. Nothing here implies that AER-1 or
 > Brennan Zambo has integrated, endorsed, or adopted `AnchorRegistry`.
 
@@ -47,7 +47,7 @@ like, not a drop-in fit for an existing `anchor_type`.
 
 | Path | What it is |
 |------|-----------|
-| `scripts/produce.py` | Builds a synthetic AER-1 receipt per Table 1/Section 5 and computes `output_hash` exactly as the spec defines it. |
+| `scripts/produce.py` | Builds a synthetic AER-1 receipt per Section 3 (Table 1) and Section 4 and computes `output_hash` exactly as the spec defines it. |
 | `verifier/verify.py` | Independent (stdlib-only): recomputes `output_hash` from the declared `canonical_bytes` and confirms the matching `Anchored` event on Base mainnet. |
 | `artifacts/` | `manifest.json` (receipt, digest) and `anchor.json` (tx/block). |
 | `scripts/anchor.sh` | The exact `cast` command used to anchor the digest. |

@@ -4,7 +4,7 @@
   "anchor_registry": "0x49fEcA52bC634a9Ab773226D16619deC547794aa",
   "anchored_ref": "91a8d2b002012e470d9fe86eaa65630589d1118dbcf1733a3a5168fbabda6131",
   "fixture_id": "aer1-anchor-witness-worked-example",
-  "provenance": "Synthetic AER-1 receipt. canonical_bytes/output_hash/metadata_hash computed exactly per draft-zambo-aer1-26 Table 1/Section 5 (SHA-256 over canonical_bytes). NOT produced by a running AER-1 client or SDK. The anchored value is AER-1's own output_hash, unwrapped \u2014 no action_ref/JCS preimage involved, since the point is that AnchorRegistry.anchor(bytes32) can anchor AER-1's own digest directly. No claim that AER-1 or Brennan Zambo has integrated, endorsed, or adopted AnchorRegistry.",
+  "provenance": "Synthetic AER-1 receipt. canonical_bytes/output_hash/metadata_hash computed exactly per draft-zambo-aer1-26 Section 3 (Table 1) and Section 4 (SHA-256 over canonical_bytes). NOT produced by a running AER-1 client or SDK. The anchored value is AER-1's own output_hash, unwrapped \u2014 no action_ref/JCS preimage involved, since the point is that AnchorRegistry.anchor(bytes32) can anchor AER-1's own digest directly. No claim that AER-1 or Brennan Zambo has integrated, endorsed, or adopted AnchorRegistry.",
   "receipt": {
     "canonical_bytes": "eyJjYWxsZXJfc2NvcGUiOiJhZXIxLWFuY2hvci13aXRuZXNzIiwicmVzdWx0Ijoib2siLCJ0b29sX25hbWUiOiJ3b3JrZWQtZXhhbXBsZS5sb29rdXAiLCJ0b29sX3ZlcnNpb24iOiIxLjAuMCJ9",
     "created_at": "2026-10-26T15:30:00Z",
